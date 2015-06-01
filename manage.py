@@ -3,6 +3,7 @@ __author__ = 'Azzssss'
 
 from flask.ext.script import Manager, Server
 from app import app
+from app.models import Todo
 
 manager = Manager(app)
 
