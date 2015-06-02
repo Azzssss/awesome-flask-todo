@@ -1,7 +1,9 @@
 __author__ = 'Azzssss'
 from app import app
 from flask import render_template
+from models import Todo
 
 @app.route("/")
 def index():
-    return render_template("index.html", text="Hello Wordld")
+    todos = Todo.objects.all()
+    return render_template("index.html", todos = todos)
